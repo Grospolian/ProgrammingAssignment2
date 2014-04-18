@@ -5,8 +5,8 @@
 ## Simple Matrix for Testing
 A <- matrix(c(1,2,0,2,3,0,3,4,1), 3, 3)
 
-## This function first checks the determinant and prints are warning if a matrix with det = 0 is provided.
-## Then the matrix is stored in a list, containing the matrix and if already calculated the inverse of the matrix.
+## This function takes a matrix as argument and first checks the determinant and prints a warning if a matrix with det = 0 is provided.
+## Then the matrix is stored in a list.
 makeCacheMatrix <- function(x = matrix()) {
   ##Test if the matrix x is invertable
   if (det(x) == 0) {
@@ -28,7 +28,7 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## This functions first either returns a stored inverse or calculates the inverse of the given matrix 
+## This functions either returns a stored inverse or calculates the inverse of the given matrix 
 ## and then stores it using the subfunctions of makeCacheMatrix. Then the cached or calculated Inverse is returned.
 
 cacheSolve <- function(x, ...) {
